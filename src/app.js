@@ -127,7 +127,7 @@ app.put("/users/:id", async (req, res) => {
         res.status(400).json(error.message);
     }
 });
-app.put("/todo/:userId", async (req, res) => {
+app.put("/todos/:userId", async (req, res) => {
     try {
         const {userId} = req.params;
         const field = req.body;
@@ -155,7 +155,7 @@ app.delete("/users/:id", async (req, res) => {
     }
 });
 
-app.delete("/users/:userId", async (req, res) => {
+app.delete("/todos/:userId", async (req, res) => {
     try {
         const {userId} = req.params;
         const result = await Todos.destroy({
